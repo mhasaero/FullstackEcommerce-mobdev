@@ -1,11 +1,22 @@
-import { Card } from '@/components/ui/card';
-import { Image } from '@/components/ui/image';
-import { Text } from '@/components/ui/text';
-import { Heading } from '@/components/ui/heading';
-import { Link } from 'expo-router';
-import { Pressable } from 'react-native';
+import { Card } from "@/components/ui/card";
+import { Image } from "@/components/ui/image";
+import { Text } from "@/components/ui/text";
+import { Heading } from "@/components/ui/heading";
+import { Link } from "expo-router";
+import { Pressable } from "react-native";
 
-export default function ProductListItem({ product }) {
+interface Product {
+  id: string | number;
+  name: string;
+  image: string;
+  price: number;
+}
+
+interface ProductListItemProps {
+  product: Product;
+}
+
+export default function ProductListItem({ product }: ProductListItemProps) {
   return (
     <Link href={`/product/${product.id}`} asChild>
       <Pressable className="flex-1">

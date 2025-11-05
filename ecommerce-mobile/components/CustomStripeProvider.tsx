@@ -1,14 +1,14 @@
-import { fetchStripeKeys } from '@/api/stripe';
-import { StripeProvider } from '@stripe/stripe-react-native';
-import { useQuery } from '@tanstack/react-query';
+import { fetchStripeKeys } from "@/api/stripe";
+import { StripeProvider } from "@stripe/stripe-react-native";
+import { useQuery } from "@tanstack/react-query";
 
 export default function CustomStripeProvider({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactElement | React.ReactElement[];
 }) {
   const { data: stripeKeys } = useQuery({
-    queryKey: ['stripe', 'keys'],
+    queryKey: ["stripe", "keys"],
     queryFn: fetchStripeKeys,
   });
 
