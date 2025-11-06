@@ -20,7 +20,7 @@ export default function ProductDetailScreen() {
   }
 
   return (
-    <Card className="p-5 rounded-lg max-w-[360px] m-3 flex-1">
+    <Card className="p-8 rounded-lg max-w-[360px] m-3 flex">
       <Image
         source={{
           uri: product.image,

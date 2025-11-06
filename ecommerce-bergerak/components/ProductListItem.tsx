@@ -11,12 +11,12 @@ export default function ProductItemList({ product }: any) {
   return (
     <Link href={`/product/${product.id}`} asChild>
       <Pressable className="flex-1">
-        <Card className="p-5 rounded-lg max-w-[360px] m-3 flex-1">
+        <Card className="p-5 rounded-lg m-2 flex-1">
           <Image
             source={{
               uri: product.image,
             }}
-            className="mb-6 h-[260px] w-full rounded-md aspect-[263/240]"
+            className="mb-6 h-[160px] w-full rounded-md aspect-[263/240]"
             alt={product.name}
             resizeMode="contain"
           />
@@ -24,7 +24,7 @@ export default function ProductItemList({ product }: any) {
           <Text className="text-sm font-normal mb-2 text-typography-700">
             {product.name}
           </Text>
-          <Heading size="md" className="mb-4">
+          <Heading size="md" className="">
             ${product.price}
           </Heading>
         </Card>
